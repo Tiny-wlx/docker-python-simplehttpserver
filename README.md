@@ -31,3 +31,5 @@ To run server so it is only accessible to linked containers:
     # Another example:
     # Use with trinitronx/fastest-servers as a MIRRORLIST_HOST for serving up mirrors.txt file for fastest-servers.rb to filter down to fastest found
     sudo docker run -ti --link python_simplehttpserver -e FASTEST_SERVER_DEBUG=true -e MIRRORLIST_HOST=python_simplehttpserver -e MIRRORLIST_PORT=8080 -v /tmp/:/tmp/ trinitronx/fastest-servers
+
+test
