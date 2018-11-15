@@ -48,7 +48,9 @@ function setRelease() {
 
 function setDockerTag() {
 	if [ -n "$1" ] ; then
-		sed -i "s/^tag=.*/tag=$1/g" .docker-image-tag
+# 		sed -i "s/^tag=.*/tag=$1/g" .docker-image-tag
+		
+		sed -i 's|^tag=.*|tag='$1'|g' file
 	else
 		echo "ERROR: missing docker image tag " >&2
 		return 1
