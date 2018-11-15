@@ -106,7 +106,7 @@ tag: check-status
 	git checkout master
 	git pull
 	git add .
-	git commit -m "bumped to version $(VERSION)" ;
+	git commit -m "bumped to version $(VERSION) [ci skip]" ;
 	git tag $(TAG) ;
 	@ if [ -n "$(shell git remote -v)" ] ; then git push --tags ; else echo 'no remote to push tags to' ; fi
 	git push origin master 
