@@ -46,14 +46,14 @@ function setRelease() {
 	fi
 }
 
-# function setDockerTag() {
-# 	if [ -n "$1" ] ; then
-# 		sed -i "s/tag=.*/tag=$1/g" .docker-image-tag
-# 	else
-# 		echo "ERROR: missing docker image tag " >&2
-# 		return 1
-# 	fi
-# }
+function setDockerTag() {
+	if [ -n "$1" ] ; then
+		sed -i "s/^tag=.*/tag=$1/g" .docker-image-tag
+	else
+		echo "ERROR: missing docker image tag " >&2
+		return 1
+	fi
+}
 
 function runPreTagCommand() {
 	if [ -n "$1" ] ; then
