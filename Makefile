@@ -1,2 +1,2 @@
 include ./make/Makefile
-include ./make/push-to-mfdata-us-west-2.Makefile
+include ./make/push-to-mfdata-us-east-1.Makefile
