@@ -19,7 +19,7 @@ function hasChanges() {
 }
 
 function getRelease() {
-	pwd
+	pwd >&2
 	awk -F= '/^release=/{print $2}' make/.release
 }
 
