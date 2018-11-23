@@ -60,7 +60,6 @@ docker-build: .release
 	fi
 
 .release:
-	@ls -al
 	@echo "release=0.0.0" > make/.release
 	@echo "tag=$(NAME)-0.0.0" >> make/.release
 	@echo INFO: make/.release created
@@ -82,7 +81,6 @@ showver: .release
 	@. $(RELEASE_SUPPORT); getVersion
 
 tag-patch-release: VERSION := $(shell . $(RELEASE_SUPPORT); nextPatchLevel)
-	@echo $(VERSION)
 tag-patch-release: .release tag
 
 tag-minor-release: VERSION := $(shell . $(RELEASE_SUPPORT); nextMinorLevel)
