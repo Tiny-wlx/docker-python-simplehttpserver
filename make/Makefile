@@ -60,10 +60,10 @@ docker-build: .release
 	fi
 
 .release:
-	@echo "release=0.0.0" > .release
-	@echo "tag=$(NAME)-0.0.0" >> .release
-	@echo INFO: .release created
-	@cat .release
+	@echo "release=0.0.0" > make/.release
+	@echo "tag=$(NAME)-0.0.0" >> make/.release
+	@echo INFO: make/.release created
+	@cat make/.release
 
 
 release: check-status check-release build push
