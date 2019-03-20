@@ -26,5 +26,5 @@ phases:
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $ECR_REPO:$IMAGE_TAG
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $ECR_REPO:latest
 #       - docker push $ECR_REPO:$IMAGE_TAG
-      - docker push $ECR_REPO:latest
+      - docker push $ECR_REPO:release
 
